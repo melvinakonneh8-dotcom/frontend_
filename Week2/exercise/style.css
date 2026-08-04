@@ -1,0 +1,12 @@
+/* Element Selector */
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 5rem;
+    background-color: darkcyan;
+
+}
+        h2{
+            color: aliceblue;
+            background-color: brown;
+            padding: 1rem;
+        }
