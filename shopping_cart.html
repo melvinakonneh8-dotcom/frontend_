@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Shopping Cart</title>
+</head>
+<body>
+
+    <h1>My Shopping Cart </h1>
+
+    <script type="text/javascript">
+// Task 2: Product arrays 
+
+console.log("========== MY SHOPPING CART ==========");
+console.log("");
+console.log("--- ITEMS IN CART ---");
+        let productNames = ["Shirt", "Shoes", "Hat", "Jacket", "Socks"];
+        let productPrices = [25, 60, 15, 90, 8];
+
+// Task 3: Loop through prices to calculate the subtotal
+
+        let subtotal = 0;
+        for (let i = 0; i < productPrices.length; i++) {
+    subtotal = subtotal + productPrices[i];
+    console.log(productNames[i] + " - $" + productPrices[i]);
+}
+ console.log("");
+console.log("--- PRICING CALCULATIONS ---");
+
+// Task 4: Apply a discount based on the subtotal
+
+let discountRate = 0;
+
+if (subtotal >= 200) {
+    discountRate = 0.20;
+} else if (subtotal >= 100) {
+    discountRate = 0.10;
+} else {
+    discountRate = 0;
+}
+
+let discountAmount = subtotal * discountRate;
+let finalTotal = subtotal - discountAmount;
+
+// Task 5: Print the checkout summary
+
+console.log("----- CHECKOUT SUMMARY -----");
+console.log("Number of items: " + productNames.length);
+console.log("Subtotal: $" + subtotal);
+console.log("Discount: " + (discountRate * 100) + "%");
+console.log("Discount amount: $" + discountAmount);
+console.log("Final total: $" + finalTotal);
+
+console.log("");
+console.log("--- ARRAY OPERATIONS ---");
+
+// Task 6: Array operations - push, join, sort
+
+productNames.push("Scarf");
+productPrices.push(20);
+console.log("✓ Added new product: " + productNames[productNames.length - 1] + " ($" + productPrices[productPrices.length - 1] + ")");
+
+console.log("");
+console.log("All products: " + productNames.join(", "));
+
+console.log("");
+let sortedNames = productNames.slice().sort();
+console.log("Sorted alphabetically: " + sortedNames.join(", "));
+
+console.log("========== END ==========");
+    </script>
+
+</body>
+</html>
